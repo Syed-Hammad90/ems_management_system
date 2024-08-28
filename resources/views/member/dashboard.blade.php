@@ -1,6 +1,6 @@
-@extends('layouts.app')
+<!-- @extends('layouts.app') -->
 
-@section('content')
+<!-- @section('content') -->
 
 <div class="container vh-100 d-flex flex-column justify-content-between align-items-center">
     <div class="w-100 text-center">
@@ -29,4 +29,4 @@
     </div>
 </div>
 
-@endsection
+<!-- @endsection -->

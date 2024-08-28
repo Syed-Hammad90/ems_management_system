@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'TECHHOOD LEAD MANAGEMENT') }}</title>
+    <!-- <title>{{ config('app.name', 'TECHHOOD LEAD MANAGEMENT') }}</title>
     <style>
         .centered-title {
             display: flex;
@@ -18,9 +18,11 @@
             font-weight: bold;
             text-align: center;
         }
-    </style>
+    </style> -->
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -37,14 +39,13 @@
                 <!-- <a class="navbar-brand mx-auto" href="{{ url('/') }}">
                 <h1 class="font-weight-bold"></h1>TECHHOOD LEAD MANAGEMENT </h1>
                 </a> -->
-                <div class="text-center my-4">
-    <a href="{{ url('/') }}" class="text-decoration-none">
-        <h1 class="font-weight-bold">TECHHOOD MANAGEMENT SYSTEM</h1>
-    </a>
-</div>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                <a href="{{ url('/') }}" class="text-decoration-none">
+        <h1 class="font-weight-bold">EMPLOYEE MANAGEMENT SYSTEM</h1>
+        </a>
+        </div>               
+                <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
-                </button>
+                </button> -->
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
@@ -69,7 +70,7 @@
                             @endif
                         @else
                             <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="navbarSupportedContent" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
                                 </a>
 
