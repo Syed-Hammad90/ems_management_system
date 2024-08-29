@@ -1,6 +1,6 @@
-<!-- @extends('layouts.app') -->
+@extends('layouts.app')
 
-<!-- @section('content') -->
+@section('content')
 
 <div class="container vh-100 d-flex flex-column justify-content-between align-items-center">
     <div class="w-100 text-center">
@@ -21,12 +21,12 @@
         </div>
     @endif
 
-    <div class="w-100 text-center mb-4">
+    <!-- <div class="w-100 text-center mb-4">
         <form action="{{ route('logout') }}" method="POST">
             @csrf
             <button type="submit" class="btn btn-outline-danger">Logout</button>
         </form>
-    </div>
+    </div> -->
 </div>
 
-<!-- @endsection -->
+@endsection
