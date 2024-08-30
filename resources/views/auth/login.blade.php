@@ -22,22 +22,27 @@
                     <p class="text-white fs-1 fw-bold mb-4 mt-4">TECHHOOD</p>
                 </div>
                 <div class="login-form">
-                    <form class="form-horizontal form-material" id="loginform" action="{{ route('login') }}"
-                        method="POST">
-                        <input type="hidden" name="_token" value="CocfLkasAHYBbc9KQZdO3evBO9UYQurbi6Yt1TOR">
+                    <form class="form-horizontal form-material" id="loginform" method="POST" action="{{ route('login') }}">
+                    @csrf
+                       
                         <div class="form-group ">
                             <div class="col-xs-12">
-                                <input class="form-control" id="email" type="email" name="email" value="" autofocus=""
+                                <input class="form-control @error('email') is-invalid @enderror" id="email" type="email"  name="email" value="" autofocus=""
                                     required="" placeholder="Email">
+
+                                    @error('email')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="col-xs-12">
-                                <input class="form-control" id="password" type="password" name="password" required=""
+                                <input class="form-control  @error('password') is-invalid @enderror" id="password" type="password" name="password" required=""
                                     placeholder="Password">
                             </div>
-                        </div>
-                        <input type="hidden" name="recaptcha_token" id="recaptcha_token">
+                        </div>                       
                         <div class="form-group">
                             <div class="col-xs-12">
                                 <div class="checkbox checkbox-primary pull-left p-t-0">
@@ -68,10 +73,10 @@
                     </form>
                 </div>
             </div>
-            <div class="col-lg-7 visible-lg background-section" >
-                
-            </div>
-            <!--    <div class="col-md-8">
+            <div class="col-lg-7 visible-lg background-section" ></div>
+            
+            <!--  -->
+               <!-- <div class="col-md-8">
                 <div class="card">
                     <div class="card-header text-center font-weight-bold">{{ __('Login') }}</div>
                     <div class="card-body">
@@ -140,7 +145,9 @@
                         </form>
                     </div>
                 </div>
-            </div>-->
+            </div> -->
+
+            <!--  -->
         </div>
 
     </div>
