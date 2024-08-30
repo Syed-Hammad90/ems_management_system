@@ -8,6 +8,8 @@
     <title>TECHHOOD</title>
 
     <!-- Fonts -->
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/homepage.css')}}" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -15,61 +17,8 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Styles -->
-    <style>
-        .grand_parent {
-            width: 100%;
-            height: -webkit-fill-available;
-            background: url('{{ asset("assets/bg-01.png") }}');
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
-            background-position: right;
-            position: absolute;
-            z-index: -9;
-        }
-
-        .chili-red {
-            color: #a71e4e;
-            /* Chili Red Color */
-            font-weight: bold;
-        }
-
-        .login-button {
-            font-weight: bold;
-            color: white;
-            background-color: #a71e4e;
-            /* Matching the heading color */
-            border-color: #a71e4e;
-        }
-
-        .header_parent_div {
-            padding-block: 33px;
-            background: transparent;
-            position: relative;
-            z-index: 9;
-        }
-
-        .banner_main h1 {
-            font-size: 64px;
-            font-weight: 400;
-            margin: 0;
-            color: #a71e4e;
-            font-family:
-        }
-
-        .banner_right_img {
-            width: auto;
-            height: auto;
-            /* z-index: 1; */
-        }
-    </style>
-
-    <style>
-        body {
-            font-family: 'Nunito', sans-serif;
-        }
-    </style>
 </head>
 
 <body class="antialiased">
@@ -82,8 +31,8 @@
                             <img src="assets\Techhood-logo.png" width="100" alt="">
                             <p class="chili-red mb-4 mt-4">TECHHOOD</p>
                         </div>
-                        <div>
-                            <a href="{{ route('login') }}" class="btn login-button px-5 py-2">Log In</a>
+                        <div class="btn">
+                            <a href="{{ route('login') }}" class=" login-button px-5 py-2">Log In</a>
                         </div>
                     </div>
                 </div>
@@ -129,9 +78,6 @@
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
     @endif
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
 
 </body>
 
