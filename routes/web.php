@@ -35,7 +35,6 @@ Route::group(['middleware' => ['auth', 'admin']], function () {
     //dashboard
     Route::get('admin/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
 
-
     Route::get('admin/sale-manager/all', [AdminController::class, 'allSalesManager'])->name('admin.sale.all');
     Route::get('admin/sale-manager/create', [AdminController::class, 'createSalesManager'])->name('admin.sale.create');
     Route::post('admin/sale-manager/store', [AdminController::class, 'storeSalesManager'])->name('admin.sale.store');
@@ -43,9 +42,8 @@ Route::group(['middleware' => ['auth', 'admin']], function () {
     Route::post('admin/sale-manager/{id}/update', [AdminController::class, 'updateSalesManager'])->name('admin.sale.update');
     Route::get('admin/sale-manager/{id}/delete', [AdminController::class, 'deleteSalesManager'])->name('admin.sale.delete');
 
-
-
 });
+
 
 Route::group(['middleware' => ['auth', 'editor']], function () {
     // Editor routes
@@ -54,21 +52,9 @@ Route::group(['middleware' => ['auth', 'editor']], function () {
 });
 
 
-// Login Route
-
-// Route::get('login', [LoginController::class, 'showLoginForm'])->name('login');
-// Route::post('login', [LoginController::class, 'login']);
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-// Route::middleware('web')->group(function () {
-//     // Define routes here
-//     Route::get('login', [LoginController::class, 'showLoginForm'])->name('login');
-//     Route::post('login', [LoginController::class, 'login']);
-// });
-
 Auth::routes();
-// Route::get('/home', [App\Http\Controllers\AdminController::class, 'index'])->name('admin.dashboard');
-// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

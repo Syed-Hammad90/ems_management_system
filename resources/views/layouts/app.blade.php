@@ -6,21 +6,10 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
-    <!-- <title>{{ config('app.name', 'TECHHOOD LEAD MANAGEMENT') }}</title>
-    <style>
-        .centered-title {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            font-size: 36px;
-            font-weight: bold;
-            text-align: center;
-        }
-    </style> -->
+    
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ mix('js/app.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 
@@ -28,25 +17,20 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
 </head>
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container justify-content-center">
-                <!-- <a class="navbar-brand mx-auto" href="{{ url('/') }}">
-                <h1 class="font-weight-bold"></h1>TECHHOOD LEAD MANAGEMENT </h1>
-                </a> -->
+            <div class="container justify-content-center">               
                 <a href="{{ url('/') }}" class="text-decoration-none">
         <h1 class="font-weight-bold">EMPLOYEE MANAGEMENT SYSTEM</h1>
         </a>
         </div>               
-                <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button> -->
-
+                
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
@@ -63,11 +47,11 @@
                                 </li>
                             @endif
 
-                            @if (Route::has('register'))
+                            <!-- @if (Route::has('register'))
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
-                            @endif
+                            @endif -->
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="navbarSupportedContent" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -96,6 +80,64 @@
             @yield('content')
         </main>
     </div>
+    <div class="sidebar">
+  <ul class="nav-list">
+    <li>
+      <a href="{{ route('admin.dashboard') }}">
+        <i class="fa fa-dashboard"></i>
+        <span class="links_name">Dashboard</span>
+      </a>
+    </li>
+    <li>
+      <a href="#leads">
+        <i class="fa fa-address-book"></i>
+        <span class="links_name">Leads</span>
+      </a>
+    </li>
+    <li>
+      <a href="#customers">
+        <i class="fa fa-users"></i>
+        <span class="links_name">Customers</span>
+      </a>
+    </li>
+    <li>
+      <a href="#hr">
+        <i class="fa fa-user"></i>
+        <span class="links_name">HR</span>
+      </a>
+    </li>
+    <li>
+      <a href="#work">
+        <i class="fa fa-briefcase"></i>
+        <span class="links_name">Work</span>
+      </a>
+    </li>
+    <li>
+      <a href="#sales">
+        <i class="fa fa-money"></i>
+        <span class="links_name">Sale</span>
+      </a>
+    </li>
+    <li>
+      <a href="#items">
+        <i class="fa fa-cubes"></i>
+        <span class="links_name">Items</span>
+      </a>
+    </li>
+    <li>
+      <a href="#tickets">
+        <i class="fa fa-ticket"></i>
+        <span class="links_name">Tickets</span>
+      </a>
+    </li>
+    <li>
+      <a href="#reports">
+        <i class="fa fa-file"></i>
+        <span class="links_name">Reports</span>
+      </a>
+    </li>
+  </ul>
+</div>
 </body>
-<script src="{{ mix('js/app.js') }}"></script>
+
 </html>
