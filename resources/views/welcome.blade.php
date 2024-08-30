@@ -20,7 +20,7 @@
     <style>
         .grand_parent {
             width: 100%;
-            height: auto;
+            height: -webkit-fill-available;
             background: url('{{ asset("assets/bg-01.png") }}');
             background-size: 100% 100%;
             background-repeat: no-repeat;

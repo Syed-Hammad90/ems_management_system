@@ -1,0 +1,11 @@
+/* Welcome Page start */
+.chili-red {
+    color: #a71e4e; /* Chili Red Color */
+    font-weight: bold;
+}
+.login-button {
+    font-weight: bold;
+    color: white;
+    background-color: #a71e4e; /* Matching the heading color */
+    border-color: #a71e4e;
+}
