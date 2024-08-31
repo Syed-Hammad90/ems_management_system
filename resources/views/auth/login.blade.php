@@ -46,7 +46,7 @@
                         <div class="form-group">
                             <div class="col-xs-12">
                                 <div class="checkbox checkbox-primary pull-left p-t-0">
-                                    <input id="checkbox-signup" type="checkbox" name="remember">
+                                    <input id="checkbox-signup" type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}>
                                     <label for="checkbox-signup" class="text-dark"> Remember Me </label>
                                 </div>
                                 <a href="" class="text-dark pull-right" style="text-decoration: none;" ><i
@@ -76,7 +76,7 @@
             <div class="col-lg-7 visible-lg background-section" ></div>
             
             <!--  -->
-               <!-- <div class="col-md-8">
+               <div class="col-md-8">
                 <div class="card">
                     <div class="card-header text-center font-weight-bold">{{ __('Login') }}</div>
                     <div class="card-body">
@@ -145,7 +145,7 @@
                         </form>
                     </div>
                 </div>
-            </div> -->
+            </div>
 
             <!--  -->
         </div>
