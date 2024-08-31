@@ -8,8 +8,7 @@
 
 
 
-    <h1>Create Sales Manager</h1>
-
+    <h1>New Employee Form</h1>
 
     @if ($errors->any())
     <div class="alert alert-danger alert-dismissible fade show" role="alert">
@@ -21,7 +20,6 @@
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
     @endif
-
 
     <form action="{{ route('admin.sale.store') }}" method="POST">
         @csrf

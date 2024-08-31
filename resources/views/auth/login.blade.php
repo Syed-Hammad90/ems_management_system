@@ -49,7 +49,7 @@
                                     <input id="checkbox-signup" type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}>
                                     <label for="checkbox-signup" class="text-dark"> Remember Me </label>
                                 </div>
-                                <a href="" class="text-dark pull-right" style="text-decoration: none;" ><i
+                                <a href="{{ route('password.request') }}" class="text-dark pull-right" style="text-decoration: none;" ><i
                                         class="fa fa-lock m-r-5"></i>
                                     Forgot Password?</a>
                             </div>
@@ -60,12 +60,11 @@
                                     class="login-button p-3 btn-lg btn-block btn-rounded text-uppercase waves-effect waves-light"
                                     type="submit">{{ __('Login') }}</button>
                             </div>
-                        </div>
-                        
+                        </div>                    
 
                         <div class="form-group m-b-0">
                             <div class="col-sm-12 text-center">
-                                <p>Go to Website <a href=""
+                                <p>Go to Website <a href="{{ url('/') }}"
                                         class="text-techhood-red m-l-5"><b>Home</b></a></p>
                             </div>
                         </div>
@@ -75,8 +74,8 @@
             </div>
             <div class="col-lg-7 visible-lg background-section" ></div>
             
-            <!--  -->
-               <div class="col-md-8">
+            <!-- don't remove -->
+               <!-- <div class="col-md-8">
                 <div class="card">
                     <div class="card-header text-center font-weight-bold">{{ __('Login') }}</div>
                     <div class="card-body">
@@ -145,9 +144,9 @@
                         </form>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
-            <!--  -->
+            <!-- don't remove -->
         </div>
 
     </div>

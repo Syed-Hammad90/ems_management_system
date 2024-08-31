@@ -24,9 +24,9 @@
     <a href="{{ route('admin.sale.all') }}" class="btn btn-info">View Online Users</a>
     <!-- Additional Dashboard Content -->
 
-    <form action="{{ route('logout') }}" method="POST">
+    <!-- <form action="{{ route('logout') }}" method="POST">
         @csrf
-        <!-- <button type="submit" class="btn btn-success">Logout</button> -->
-    </form>
+        <button type="submit" class="btn btn-success">Logout</button>
+    </form> -->
 </div>
 @endsection

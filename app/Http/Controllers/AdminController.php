@@ -31,7 +31,7 @@ class AdminController extends Controller
 
     public function createSalesManager()
     {
-        return view('admin.create_sales_manager');
+        return view('admin.new_employe_form');
     }
 
     public function storeSalesManager(Request $request)

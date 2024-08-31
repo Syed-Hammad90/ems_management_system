@@ -32,8 +32,9 @@
         <div class="row">
           <div class="col-12 d-flex justify-content-between align-items-center">
             <div class="header_logo d-flex justify-content-center align-items-center">
+            <a href="{{ route('admin.dashboard') }}">
               <img src="\assets\Techhood-logo.png" width="100" alt="">
-              <p class="chili-red mb-4 mt-4">TECHHOOD</p>
+              <p class="chili-red mb-4 mt-4">TECHHOOD</p></a>              
             </div>
             <div class="btn">
               @guest
@@ -75,11 +76,11 @@
             </a>
           </li>
           <li>
-            <a href="#leads">
+            <a href="{{ route('admin.sale.create') }}">
               <i class="fa fa-address-book"></i>
-              <span class="links_name">Leads</span>
+              <span class="links_name">Create Employee</span>
             </a>
-          </li>
+          </li>          
           <li>
             <a href="#customers">
               <i class="fa fa-users"></i>
